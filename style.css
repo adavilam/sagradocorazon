@@ -1,0 +1,439 @@
+/* Variables CSS para colores y fuentes */
+:root {
+    --primary-color: #ff6600; /* Naranja similar al de Headspace */
+    --secondary-color: #5a4bda; /* Azul/morado para acentos */
+    --text-color-dark: #333;
+    --text-color-light: #666;
+    --bg-light-gray: #f8f8f8;
+    --font-family-primary: 'Arial', sans-serif; /* Puedes cambiar por 'Inter', 'Roboto', etc. */
+}
+
+/* Reset básico y estilos generales */
+body {
+    margin: 0;
+    font-family: var(--font-family-primary);
+    line-height: 1.6;
+    color: var(--text-color-dark);
+    background-color: #fff;
+}
+
+h1, h2, h3, h4 {
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilos del Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    height: 40px; /* Ajusta el tamaño de tu logo */
+}
+
+.header .nav-menu ul {
+    display: flex;
+    gap: 25px;
+}
+
+.header .nav-menu a {
+    color: var(--text-color-dark);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.header .nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e65c00;
+}
+
+/* Estilos de la Sección Hero */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 5%;
+    background: linear-gradient(to right, #f0f4f8, #e0e8f0); /* Degradado suave */
+    min-height: 500px;
+    gap: 40px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+}
+
+.hero-text h1 strong {
+    color: var(--primary-color); /* Color de acento para el texto resaltado */
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    color: var(--text-color-light);
+    margin-bottom: 30px;
+}
+
+.hero-cta {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-cta:hover {
+    background-color: #4a3cd2;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Estilos de las Secciones de Contenido */
+.main-content {
+    padding-bottom: 50px; /* Espacio al final del contenido principal */
+}
+
+.section-container {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section-container.bg-light-gray {
+    background-color: var(--bg-light-gray);
+}
+
+.section-header {
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header h2 {
+    font-size: 2.5em;
+    color: var(--text-color-dark);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1.1em;
+    color: var(--text-color-light);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-card, .content-card-small {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover, .content-card-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.icon-large {
+    font-size: 3.5em;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.icon-medium {
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.content-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: var(--text-color-dark);
+}
+
+.content-card p {
+    color: var(--text-color-light);
+}
+
+.content-card-small h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+.content-card-small p {
+    font-size: 0.95em;
+    color: var(--text-color-light);
+}
+
+
+/* Estilos para la sección de IA en Educación */
+.feature-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.feature-item img {
+    max-width: 100%;
+    height: 200px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--text-color-dark);
+}
+
+.feature-item p {
+    color: var(--text-color-light);
+    font-size: 0.95em;
+}
+
+/* Estilos para la sección del Pacto Educativo */
+.pacto-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Alineación del texto dentro de esta sección */
+}
+
+.pacto-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.pacto-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.pacto-text {
+    flex: 1.5; /* Mayor espacio para el texto */
+    min-width: 350px;
+}
+
+.pacto-text h3 {
+    font-size: 2em;
+    color: var(--text-color-dark);
+    margin-bottom: 20px;
+}
+
+.pacto-text p {
+    font-size: 1.1em;
+    color: var(--text-color-light);
+    margin-bottom: 25px;
+}
+
+.pacto-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pacto-text ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: var(--text-color-dark);
+    display: flex;
+    align-items: center;
+}
+
+.pacto-text ul li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--text-color-dark);
+    color: white;
+    padding: 40px 5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.footer .social-links a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column-reverse; /* Imagen arriba, texto abajo en móviles */
+        text-align: center;
+    }
+
+    .hero-text, .hero-image {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8em;
+    }
+
+    .header .nav-menu ul {
+        gap: 15px;
+    }
+
+    .content-grid, .feature-row, .pacto-content {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        flex-direction: column; /* Apila elementos */
+    }
+
+    .pacto-text, .pacto-image {
+        min-width: unset;
+        width: 100%;
+        text-align: center; /* Centra el texto en móviles */
+    }
+
+    .section-container {
+        padding: 50px 5%;
+    }
+
+    .section-header h2 {
+        font-size: 2em;
+    }
+
+    .content-card, .feature-item {
+        margin-bottom: 20px; /* Espacio entre tarjetas apiladas */
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .header .nav-menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .hero-cta {
+        width: 100%;
+    }
+}
